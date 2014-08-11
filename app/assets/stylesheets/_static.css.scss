@@ -1,0 +1,92 @@
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+.stripe.black {
+  background: #000;
+  color: #fff;
+}
+.stripe.white {
+  background: #fff;
+  color: #000;
+}
+
+.rollin {
+  @include flipper();  
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 160px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.gist {
+  text-align: justify;
+  padding: 40px 0;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+.projects {
+  @include striped_top();
+
+  ul {
+    margin-top: 40px;
+    font-size: 19px;
+  }
+  li {
+    margin: 6px 0;
+
+    &:hover span {
+      opacity: 1;
+    }
+    span {
+      display: inline-block;
+      margin-left: 10px;
+      opacity: 0;
+      transition: all 320ms;
+      
+      &:before {
+        content: ' - ';
+        margin-right: 10px;
+      }
+    }
+  }
+  a {
+    font-weight: bold;
+    opacity: .75;
+    
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+footer {
+  padding: 20px 0;
+  @extend .stripe.black;
+  @include clearfix;
+
+  .container {
+    padding: 0;
+  }
+  
+  .contact-method {
+    display: inline-block;
+    float: left;
+    margin-right: 40px;
+  }
+  .copyleft {
+    display: inline-block;
+    float: right;
+  }
+}

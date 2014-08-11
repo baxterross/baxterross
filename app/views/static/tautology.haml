@@ -1,0 +1,17 @@
+.overlay
+= render partial: 'title_bar', locals: {text: 'Tautology'}
+.stripe.black
+  .container
+    .gist
+      Tautology is a development lab where we brew amazing applications.
+      %br
+      We speak Ruby and Rails, Coffeescript, Sass, and Haml. Unless we're speaking Node and Express, or Ruby and Sinatra, and we know how to say "hello" and "pass the mustard" in Python and Django.
+.stripe.white.projects
+  .container
+    %h2
+      Projects We've Worked On
+    %ul
+      - @projects.each do |project|
+        %li
+          %a{ href: project[:url], target: '_blank' }= project[:name]
+          %span= project[:description]
