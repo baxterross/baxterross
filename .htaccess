@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteRule ^portfolio ?a=portfolio
+RewriteRule ^resume https://docs.google.com/document/d/1rh5fvgs98rrUbSTdS71korOCfkxkNf1lpNVkC0CD1dk
+RewriteRule ^github http://github.com/baxterross
+RewriteRule ^twitter http://twitter.com/baxterross
+RewriteRule ^facebook http://facebook.com/baxterross
