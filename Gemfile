@@ -4,6 +4,7 @@ gem 'rails', '4.0.4'
 
 gem 'pg'
 
+gem 'rails_serve_static_assets'
 gem 'sass-rails', '~> 4.0.2'
 gem 'haml'
 gem 'coffee-rails', '~> 4.0.0'
