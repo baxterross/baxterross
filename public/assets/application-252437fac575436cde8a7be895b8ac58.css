@@ -1,0 +1,240 @@
+/* line 8, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  line-height: 1.4;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 16, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 21, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+ul, li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 27, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* line 34, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.arrow-link:hover {
+  opacity: .8;
+}
+/* line 38, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.arrow-link:after {
+  content: '>';
+  display: inline-block;
+  margin-left: 4px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+/* line 1, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 80px 0;
+}
+
+/* line 7, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.stripe.black, footer {
+  background: #000;
+  color: #fff;
+}
+
+/* line 11, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.stripe.white {
+  background: #fff;
+  color: #000;
+}
+
+/* line 79, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.rollin {
+  position: relative;
+}
+/* line 84, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.rollin.loaded:before, .rollin.loaded:after {
+  transform: rotate(180deg);
+  margin-left: -50px;
+}
+/* line 90, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.rollin:before, .rollin:after {
+  display: block;
+  content: '';
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  height: 50px;
+  width: 100px;
+  border-radius: 50px;
+  transition: all 640ms;
+}
+/* line 101, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.rollin:before {
+  bottom: -50px;
+  border-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background: #000;
+  transform-origin: 50% 0;
+}
+/* line 109, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.rollin:after {
+  bottom: 0px;
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  background: #fff;
+  transform-origin: 50% 100%;
+}
+
+/* line 20, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 160px;
+  line-height: 1;
+}
+
+/* line 27, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+h2 {
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+/* line 32, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.gist {
+  text-align: justify;
+  padding: 40px 0;
+  font-size: 26px;
+  font-weight: 300;
+}
+
+/* line 39, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.projects {
+  margin-top: 24px;
+  position: relative;
+}
+/* line 52, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.projects:before, .projects:after {
+  display: block;
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  border-width: 6px;
+  border-style: solid;
+  border-left: 0;
+  border-right: 0;
+}
+/* line 66, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.projects:before {
+  top: -24px;
+  border-top-color: #d6e685;
+  border-bottom-color: #8cc665;
+}
+/* line 71, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+.projects:after {
+  top: -12px;
+  border-top-color: #44a340;
+  border-bottom-color: #1e6823;
+}
+/* line 42, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.projects ul {
+  margin-top: 40px;
+  font-size: 19px;
+}
+/* line 46, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.projects li {
+  margin: 6px 0;
+}
+/* line 49, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.projects li:hover span {
+  opacity: 1;
+}
+/* line 52, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.projects li span {
+  display: inline-block;
+  margin-left: 10px;
+  opacity: 0;
+  transition: all 320ms;
+}
+/* line 58, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.projects li span:before {
+  content: ' - ';
+  margin-right: 10px;
+}
+/* line 64, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.projects a {
+  font-weight: bold;
+  opacity: .75;
+}
+/* line 68, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.projects a:hover {
+  opacity: 1;
+}
+
+/* line 74, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.tautology {
+  min-height: 1000px;
+}
+/* line 77, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+.tautology h2:after {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  height: 340px;
+  width: 340px;
+  margin-top: -148px;
+  background: url(/assets/tree.jpg) no-repeat;
+  background-size: 100%;
+  background-position: left bottom;
+  margin-left: 48px;
+}
+
+/* line 91, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+footer {
+  padding: 20px 0;
+}
+/* line 121, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+footer:before, footer:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 126, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+footer:after {
+  clear: both;
+}
+/* line 129, /var/www/baxterross/app/assets/stylesheets/application.css.scss */
+footer {
+  *zoom: 1;
+}
+/* line 96, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+footer .container {
+  padding: 0;
+}
+/* line 100, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+footer .contact-method {
+  display: inline-block;
+  float: left;
+  margin-right: 40px;
+}
+/* line 105, /var/www/baxterross/app/assets/stylesheets/_static.css.scss */
+footer .copyleft {
+  display: inline-block;
+  float: right;
+}
