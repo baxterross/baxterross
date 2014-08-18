@@ -71,6 +71,23 @@ h2 {
   }
 }
 
+.tautology {
+  min-height: 1000px;
+
+  h2:after {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    height: 340px;
+    width: 340px;
+    margin-top: -148px;
+    background: image-url('tree.jpg') no-repeat;
+    background-size: 100%;
+    background-position: left bottom;
+    margin-left: 48px;
+  }
+}
+
 footer {
   padding: 20px 0;
   @extend .stripe.black;
