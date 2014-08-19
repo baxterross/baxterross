@@ -6,6 +6,9 @@
     padding-left: 12px;
     padding-right: 12px;
   }
+  .tautology h2:after {
+    display: none;
+  }
   .gist {
     text-align: left;
   }
