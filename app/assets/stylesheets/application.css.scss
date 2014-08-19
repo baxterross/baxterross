@@ -4,6 +4,8 @@ $gh_2: #8cc665;
 $gh_3: #44a340;
 $gh_4: #1e6823;
 
+$sm-min: 360px;
+
 * {
   box-sizing: border-box;
 }
@@ -54,6 +56,7 @@ a {
 
 @mixin striped_top {
   $thickness: 6px;
+
   margin-top: $thickness * 4;
   position: relative;
 
@@ -84,6 +87,11 @@ a {
 }
 
 @mixin flipper {
+  $size: 50px;
+  @media (max-width: $sm-min) {
+    $size: 35px;
+  }
+
   & {
     position: relative;
   }
@@ -91,7 +99,7 @@ a {
   &.loaded {
     &:before, &:after {
       transform: rotate(180deg);
-      margin-left: -50px
+      margin-left: -$size;
     }
   }
 
@@ -100,14 +108,14 @@ a {
     content: '';
     position: absolute;
     left: 50%;
-    margin-left: -150px;
-    height: 50px;
-    width: 100px;
-    border-radius: 50px;
+    margin-left: -$size * 3;
+    height: $size;
+    width: $size * 2;
+    border-radius: $size;
     transition: all 640ms;
   }
   &:before {
-    bottom: -50px;
+    bottom: -$size;
     border-top: 0;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
