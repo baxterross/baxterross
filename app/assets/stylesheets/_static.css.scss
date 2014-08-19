@@ -1,7 +1,9 @@
 .container {
   width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 80px 0;
+  @include clearfix;
 }
 
 .stripe.black {
@@ -91,10 +93,10 @@ h2 {
 footer {
   padding: 20px 0;
   @extend .stripe.black;
-  @include clearfix;
 
   .container {
-    padding: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   
   .contact-method {
@@ -107,3 +109,5 @@ footer {
     float: right;
   }
 }
+
+@import 'static.small'

@@ -4,6 +4,13 @@ $gh_2: #8cc665;
 $gh_3: #44a340;
 $gh_4: #1e6823;
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+}
 
 body {
   font-family: 'Josefin Sans', sans-serif;
@@ -11,6 +18,7 @@ body {
   font-size: 18px;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 h1, h2, h3, h4, h5 {
