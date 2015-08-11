@@ -2,6 +2,10 @@ class StaticController < ApplicationController
   def baxterross
     
   end
+
+  def sidebench
+  
+  end
   
   def tautology
     @projects = [
