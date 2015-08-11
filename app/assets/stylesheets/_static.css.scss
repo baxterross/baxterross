@@ -84,6 +84,23 @@ h2 {
   }
 }
 
+.article {
+  h3 {
+    cursor: pointer;
+    opacity: .75;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  p {
+    display: none;
+  }
+  &.show p {
+    display: block;
+  }
+}
+
 .tautology {
   h2:after {
     position: absolute;
