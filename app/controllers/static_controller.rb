@@ -6,6 +6,12 @@ class StaticController < ApplicationController
   def sidebench
   
   end
+
+  def validation
+    render json: {
+      message: "Some message goes here"
+    }, status: 400
+  end
   
   def tautology
     @projects = [
