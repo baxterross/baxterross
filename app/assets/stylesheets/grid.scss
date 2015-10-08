@@ -1,0 +1,29 @@
+.row {
+  display: -webkit-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.col {
+  flex: 1 1 auto;
+}
+
+@media (min-width: 361px) {
+  .row {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .col {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
+
+@media (max-width: 640px) {
+  .row {
+    flex-direction: column;
+  }
+  .col {
+    padding-bottom: 12px;
+  }
+}

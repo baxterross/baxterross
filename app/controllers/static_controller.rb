@@ -42,4 +42,8 @@ class StaticController < ApplicationController
       }
     ]
   end
+  
+  def chemical
+    
+  end
 end
