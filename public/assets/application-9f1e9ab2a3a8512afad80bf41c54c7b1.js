@@ -1,0 +1,1 @@
+(function(){$(window).load(function(){return setTimeout(function(){return $(".rollin").addClass("loaded")},100),$(".article h3").click(function(n){return $(n.currentTarget).parent().toggleClass("show")})})}).call(this);
