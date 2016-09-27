@@ -18,7 +18,38 @@
 .stripe.white
   .container
     %h2
-      Technical Musings
+      Selected Achievements
+
+    .article
+      %h3
+        Implementing an Agile Process
+    /
+      %p
+        One of the more interesting technical challenges Tautology tackled was part of a platform we built as the technical partner in a social media analytics startup.
+        Our primary concern was to build a system which was robust and collected accurate, statistically sound data from the Twitter Firehose, an API which provides a stream of tweets the moment they are posted.
+        I designed and built a system for collecting, and processing the data we harvested utilizing multiple modules to handle different parts of the collection process.
+      %p
+        The first module was a simple road write loop which collected data from a persistent HTTP connection and wrote that data to a flat file.
+        Individual records were separated by line breaks and the system changed output files every minute.
+        If the HTTP connection was lost the system used an exponential backoff algorithm to avoid flooding a downed api with http requests.
+        After the collected removed it's lock from the collected data file, the parser would load the file and begin to parse it line-by-line.
+      %p
+        Each line of the file was handled by a different fork of the parser process which allowed the system to be both fast and robust.
+        If a thread was unable to parse a particular entry due to corrupt of unexpected data, that child process would simply exit without affecting the rest of the system.
+        Heavy loads of incoming data could potentially saturate the parser which would simply continue to work as fast as possible until it recovered from the surge;
+        because the parser was independent from the collector, no disruption of incoming data occurred.
+      %p
+        The parser would then categorize each tweet based on the hashtags and text it contained, then compare the hashtags it contained to
+        a list of search parameters and increment the relevant values stored in memcached when a search parameter was found in the incoming data.
+        The raw data was also inserted into a MySQL database for long term storage.
+      %p
+        Clients would asynchronously poll for the existence of new data which matched their specific search parameters and
+        an internal API endpoint would respond to these requests with the most recent pieces of data pulled from memcached.
+        When a client updated their search parameters, these new queries would be implemented by reconnecting to the streaming http endpoint.
+        This process was batched so as to avoid reconnecting more than once every 5 minutes. 
+      %p
+        Design and construction of this system took approximately 2-3 months while working concurrently on other features and
+        was one of the more exciting and critical projects to tackle from a technical perspective.
 
     .article
       %h3
